@@ -1,26 +1,58 @@
 <!doctype html>
+
 <html lang="en">
 <head>
-    <meta charset="utf-8">
+  <meta charset="utf-8">
 
-    <title>Deuxa</title>
-    <meta name="description" content="Deuxa Official - New Album Coming Soon">
-    <meta name="author" content="Andrej Acin">
+  <title>Deuxa</title>
+  <meta name="description" content="Deuxa Official - New Album Coming Soon">
+  <meta name="author" content="Andrej Acin">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!--<link rel="stylesheet" href="css/styles.css?v=1.0">-->
+<!--   <style type="text/css">
+      html { 
+         width:100%; 
+         height:100%; 
+         background:url(deuxa.png) center center no-repeat;
+         background-color: #000000;
+      }
+  </style> -->
 
-    <style type="text/css">
-        html { 
-           width:100%; 
-           height:100%; 
-           background:url(deuxa.png) center center no-repeat;
-           background-color: #000000;
-        }
-    </style>
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.3.7/plyr.css">
+
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
 </head>
 
 <body>
-    <!--<script src="js/scripts.js"></script>-->
-</body>
 
+<div class="container">
+  <div class="child">
+<video controls crossorigin playsinline poster="posterframe_1080.jpg" id="player">
+                <!-- Video files -->
+                <!-- <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" type="video/mp4" size="576">
+                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4" type="video/mp4" size="720">
+                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4" type="video/mp4" size="1080">
+                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1440p.mp4" type="video/mp4" size="1440"> -->
+
+                <source src="deuxa_576.mp4" type="video/mp4" size="576">
+                <source src="deuxa_720.mp4" type="video/mp4" size="720">
+                <source src="deuxa_1080.mp4" type="video/mp4" size="1080">
+
+                <!-- Fallback for browsers that don't support the <video> element -->
+                <a href="deuxa_576.mp4" download>Download</a>
+            </video>
+  </div>
+</div>
+
+<script src="https://cdn.plyr.io/3.3.7/plyr.js" integrity="sha384-pPjhaJMHyJ41M2Szr4uXSc3zRCPeZLNrg1Om9vzBcOfsRAeJk1a4zDppEd6I32wa" crossorigin="anonymous"></script>
+<script>const player = new Plyr('#player', {
+  /* options */
+  settings: ['quality'], quality: { default: 'hd1080' }, autoplay: true
+});</script>
+  <script src="js/scripts.js"></script>
+</body>
 </html>
